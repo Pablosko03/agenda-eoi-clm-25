@@ -14,11 +14,13 @@
             <p class="text-white/60">Crea tu cuenta</p>
         </div>
         <div class="bg-white text-black p-6 rounded-xl flex flex-col items-start space-y-2">
-            <input class="w-full border border-slate-300 rounded-lg p-4 text-md" type="email" placeholder="email" name="" id="">
-            <input class="w-full border border-slate-300 rounded-lg p-4 text-md" type="password" name="" id="" placeholder="contraseña">
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg w-full text-lg hover:bg-blue-900 transition-all">Registrar</button>
+            <input id="email" class="w-full border border-slate-300 rounded-lg p-4 text-md" type="email" placeholder="email" name="" id="">
+            <input id="pass" class="w-full border border-slate-300 rounded-lg p-4 text-md" type="password" name="" id="" placeholder="contraseña">
+            <button onclick="register()" class="bg-blue-600 text-white px-4 py-2 rounded-lg w-full text-lg hover:bg-blue-900 transition-all">Registrar</button>
         </div>
     </div>
+
+    <script src="js/auth.js"></script>
 
   </body>
 </html>

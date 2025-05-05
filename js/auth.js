@@ -38,6 +38,40 @@ function login() {
             localStorage.setItem("token", token)
             localStorage.setItem("userId", userId)
             
+            window.location.href = "index.html"
+        })
+        .catch((error) => console.error(error));
+}
+
+function register() {
+    const email = inEmail.value
+    const password = inPassword.value
+
+    const url = baseUrl + "/auth/v1/signup"
+
+    const requestOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "apikey": apiKey
+        },
+        body: JSON.stringify({
+            email: email,
+            password: password
+        })
+    }
+
+    fetch(url, requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+            const token = result.access_token
+            const userId = result.user.id
+
+            localStorage.setItem("token", token)
+            localStorage.setItem("userId", userId)
+
+            window.location.href = "index.html"
+            
         })
         .catch((error) => console.error(error));
 }
